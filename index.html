@@ -87,12 +87,11 @@
     <!-- Skills Section -->
     <section id="skills" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4 max-w-4xl">
-            <!-- "My Expertise" heading is already centered with text-center -->
             <h3 class="text-4xl font-bold text-center mb-10 text-indigo-800">My Expertise</h3>
-            <!-- Added justify-center to center the grid items when there are fewer than 3 columns -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+            <!-- Changed to flexbox for explicit centering of the two boxes -->
+            <div class="flex flex-wrap justify-center gap-8 max-w-2xl mx-auto">
                 <!-- Creative Skills -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:ring-2 hover:ring-indigo-500 transition duration-300 transform hover:-translate-y-1 w-full md:w-5/12 lg:w-5/12">
                     <div class="flex items-center mb-4">
                         <svg class="w-10 h-10 text-indigo-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m-5 4v-4a1 1 0 00-1-1H4a1 1 0 00-1 1v4a1 1 0 001 1h5a1 1 0 001-1zm3-1h8a1 1 0 001-1V6a1 1 0 00-1-1h-8a1 1 0 00-1 1v10a1 1 0 001 1z"></path></svg>
                         <h4 class="text-2xl font-semibold text-gray-800">Creative Design</h4>
@@ -105,7 +104,7 @@
                     </ul>
                 </div>
                 <!-- Technical Skills -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:ring-2 hover:ring-indigo-500 transition duration-300 transform hover:-translate-y-1 w-full md:w-5/12 lg:w-5/12">
                     <div class="flex items-center mb-4">
                         <svg class="w-10 h-10 text-indigo-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16L2 12l4-4"></path></svg>
                         <h4 class="text-2xl font-semibold text-gray-800">Technical Development</h4>
