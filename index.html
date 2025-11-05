@@ -6,14 +6,16 @@
   <title>Nexus Digital Solution — Ads • Graphics • Video</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <style>
     :root{
       --deep-blue:#0b3b75;
       --mid-blue:#1e63a8;
       --accent-orange:#ff9a2e;
       --accent-dark:#ff7b00;
-      --card-shadow:0 8px 30px rgba(11,59,117,0.08);
+      --card-shadow:0 10px 30px rgba(11,59,117,0.08);
     }
+    html{scroll-behavior:smooth}
     *{box-sizing:border-box}
     body{font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:#13314a}
     a{transition:all .18s}
@@ -64,7 +66,7 @@
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center text-white" href="#home">
-        <img src="47091150-d070-42ab-9a1f-f55d614dc300.jpg" alt="Nexus Logo" class="brand-logo me-2">
+        <img src="https://picsum.photos/seed/nexus-logo/120/120" alt="Nexus Logo" class="brand-logo me-2">
         <span style="font-weight:800">Nexus Digital</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -88,7 +90,7 @@
   <header id="home" class="hero">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 text-white">
+        <div class="col-lg-6 text-white" data-aos="fade-right">
           <h1>Empowering Brands with Creative Digital Solutions</h1>
           <p class="lead">We specialize in Ads, Graphics Design, and Video Editing — creating campaigns and content that grow engagement and sales for Ethiopian businesses.</p>
           <div class="mt-4 d-flex gap-3 flex-wrap">
@@ -96,13 +98,32 @@
             <a class="btn btn-outline-cta" href="#portfolio">See Our Work</a>
           </div>
 
-          <div class="mt-4 d-flex flex-wrap gap-2">
-            <div class="d-flex align-items-center me-3"><i class="fa-solid fa-bullhorn fa-2x me-2" style="color:#fff"></i><div><small class="d-block">Ads & Campaigns</small><strong>Meta / Facebook Ads</strong></div></div>
-            <div class="d-flex align-items-center"><i class="fa-solid fa-paintbrush fa-2x me-2" style="color:#fff"></i><div><small class="d-block">Graphics</small><strong>Logos, Posters</strong></div></div>
+          <div class="mt-4 d-flex flex-wrap gap-3">
+            <div class="d-flex align-items-center bg-white bg-opacity-10 p-2 rounded">
+              <i class="fa-solid fa-bullhorn fa-2x me-3" style="color:#fff"></i>
+              <div class="text-start">
+                <small class="d-block text-white-50">Ads & Campaigns</small>
+                <strong>Meta / Facebook Ads</strong>
+              </div>
+            </div>
+            <div class="d-flex align-items-center bg-white bg-opacity-10 p-2 rounded">
+              <i class="fa-solid fa-palette fa-2x me-3" style="color:#fff"></i>
+              <div class="text-start">
+                <small class="d-block text-white-50">Graphics</small>
+                <strong>Logos, Posters</strong>
+              </div>
+            </div>
+            <div class="d-flex align-items-center bg-white bg-opacity-10 p-2 rounded">
+              <i class="fa-solid fa-film fa-2x me-3" style="color:#fff"></i>
+              <div class="text-start">
+                <small class="d-block text-white-50">Video</small>
+                <strong>Editing & Motion</strong>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-lg-6 text-center">
-          <img class="hero-ill" src="https://source.unsplash.com/900x600/?digital-marketing,advertising" alt="Digital marketing illustration">
+        <div class="col-lg-6 text-center" data-aos="fade-left">
+          <img class="hero-ill" src="https://picsum.photos/seed/hero/900/600" alt="Digital marketing illustration">
         </div>
       </div>
     </div>
@@ -111,11 +132,12 @@
   <!-- SERVICES -->
   <section id="services">
     <div class="container">
-      <h3 class="section-title text-center">Our Services</h3>
-      <p class="text-center text-muted mb-4">Full-service digital solutions — from strategy to creative production and campaign delivery.</p>
+      <h3 class="section-title text-center" data-aos="fade-up">Our Services</h3>
+      <p class="text-center text-muted mb-4" data-aos="fade-up">Full-service digital solutions — from strategy to creative production and campaign delivery.</p>
       <div class="row g-4">
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="50">
           <div class="card service-card p-4 text-center">
+            <img src="https://picsum.photos/seed/ads/600/400" class="img-fluid rounded mb-3" alt="Ads service">
             <div class="mb-3"><i class="fa-solid fa-bullhorn service-icon"></i></div>
             <h5>Advertising & Campaigns</h5>
             <p class="text-muted">Audience research, creatives, ad setup and optimisation on Facebook & Instagram.</p>
@@ -123,8 +145,9 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
           <div class="card service-card p-4 text-center">
+            <img src="https://picsum.photos/seed/graphics/600/400" class="img-fluid rounded mb-3" alt="Graphics service">
             <div class="mb-3"><i class="fa-solid fa-palette service-icon"></i></div>
             <h5>Graphics Design</h5>
             <p class="text-muted">Branding, logos, social media creatives, posters, and print-ready files.</p>
@@ -132,8 +155,9 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="250">
           <div class="card service-card p-4 text-center">
+            <img src="https://picsum.photos/seed/video/600/400" class="img-fluid rounded mb-3" alt="Video service">
             <div class="mb-3"><i class="fa-solid fa-film service-icon"></i></div>
             <h5>Video Editing</h5>
             <p class="text-muted">Short-form promo videos, social clips, and product showcases optimized for engagement.</p>
@@ -147,40 +171,40 @@
   <!-- PORTFOLIO -->
   <section id="portfolio" class="bg-light">
     <div class="container">
-      <h3 class="section-title text-center">Portfolio — Selected Work</h3>
-      <p class="text-center text-muted mb-4">Sample mockups and campaign snapshots to show our style and results.</p>
+      <h3 class="section-title text-center" data-aos="fade-up">Portfolio — Selected Work</h3>
+      <p class="text-center text-muted mb-4" data-aos="fade-up">Sample mockups and campaign snapshots to show our style and results.</p>
       <div class="row g-3">
-        <div class="col-md-4 portfolio-item">
-          <img src="https://source.unsplash.com/800x600/?social-media,ad" alt="Ad mockup">
+        <div class="col-md-4 portfolio-item" data-aos="fade-up" data-aos-delay="50">
+          <img src="https://picsum.photos/seed/portfolio1/800/600" alt="Ad mockup">
           <h6 class="mt-2">Social Campaign — Café</h6>
           <p class="text-muted small">Engagement-focused ad set with creative carousel.</p>
         </div>
-        <div class="col-md-4 portfolio-item">
-          <img src="https://source.unsplash.com/800x600/?poster,design" alt="Graphic design mockup">
+        <div class="col-md-4 portfolio-item" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://picsum.photos/seed/portfolio2/800/600" alt="Graphic design mockup">
           <h6 class="mt-2">Poster & Brand Kit</h6>
           <p class="text-muted small">Logo, color palette, and print-ready poster.</p>
         </div>
-        <div class="col-md-4 portfolio-item">
-          <img src="https://source.unsplash.com/800x600/?video,editing" alt="Video project mockup">
+        <div class="col-md-4 portfolio-item" data-aos="fade-up" data-aos-delay="250">
+          <img src="https://picsum.photos/seed/portfolio3/800/600" alt="Video project mockup">
           <h6 class="mt-2">Product Video</h6>
           <p class="text-muted small">30s product highlight for social platforms.</p>
         </div>
       </div>
 
-      <div class="text-center mt-4"><a href="#contact" class="btn btn-primary-cta">Book a Portfolio Review</a></div>
+      <div class="text-center mt-4" data-aos="fade-up"><a href="#contact" class="btn btn-primary-cta">Book a Portfolio Review</a></div>
     </div>
   </section>
 
   <!-- VIDEO SAMPLES -->
   <section id="video">
     <div class="container">
-      <h3 class="section-title text-center">Video Editing Samples</h3>
-      <p class="text-center text-muted mb-4">Short edits and promotional cuts — optimized for Instagram & Facebook.</p>
+      <h3 class="section-title text-center" data-aos="fade-up">Video Editing Samples</h3>
+      <p class="text-center text-muted mb-4" data-aos="fade-up">Short edits and promotional cuts — optimized for Instagram & Facebook.</p>
       <div class="row g-4 align-items-center">
-        <div class="col-md-6">
-          <iframe class="video-frame" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Video sample" allowfullscreen></iframe>
+        <div class="col-md-6" data-aos="fade-right">
+          <img src="https://picsum.photos/seed/video-thumb/900/600" class="video-frame" alt="Video sample thumbnail">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-left">
           <h5>Short Promo — Sample Edit</h5>
           <p class="text-muted">A fast-paced 30s promo edit with overlays, music, and CTA optimized for conversions.</p>
           <ul class="text-muted">
@@ -197,11 +221,11 @@
   <!-- ABOUT -->
   <section id="about" class="bg-light">
     <div class="container">
-      <h3 class="section-title text-center">About Nexus</h3>
-      <p class="text-center text-muted mb-4">Nexus Digital Solution blends creativity and data. We help Ethiopian businesses stand out with high-performing ads, memorable visuals, and video storytelling.</p>
+      <h3 class="section-title text-center" data-aos="fade-up">About Nexus</h3>
+      <p class="text-center text-muted mb-4" data-aos="fade-up">Nexus Digital Solution blends creativity and data. We help Ethiopian businesses stand out with high-performing ads, memorable visuals, and video storytelling.</p>
       <div class="row align-items-center">
-        <div class="col-md-6 text-center"><img src="https://source.unsplash.com/600x400/?team,office" class="img-fluid rounded shadow-sm" alt="Team"></div>
-        <div class="col-md-6">
+        <div class="col-md-6 text-center" data-aos="fade-right"><img src="https://picsum.photos/seed/team/600/400" class="img-fluid rounded shadow-sm" alt="Team"></div>
+        <div class="col-md-6" data-aos="fade-left">
           <h5>How we work</h5>
           <ol class="text-muted">
             <li>Discovery & audience research</li>
@@ -217,10 +241,10 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="container">
-      <h3 class="section-title text-center">Get a Free Quote</h3>
-      <p class="text-center text-muted mb-4">Tell us about your project and we’ll reply within 24 hours.</p>
+      <h3 class="section-title text-center" data-aos="fade-up">Get a Free Quote</h3>
+      <p class="text-center text-muted mb-4" data-aos="fade-up">Tell us about your project and we’ll reply within 24 hours.</p>
       <div class="row g-4">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right">
           <div class="card contact-card p-4">
             <h5>Contact Details</h5>
             <p class="mb-1"><strong>Email:</strong> orbijshmas@gmail.com</p>
@@ -231,7 +255,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left">
           <div class="card p-4 contact-card">
             <!-- Note: replace form action with your Formspree or server endpoint. Currently opens mail client. -->
             <form action="mailto:orbijshmas@gmail.com" method="post" enctype="text/plain">
@@ -270,7 +294,7 @@
     <div class="container">
       <div class="d-flex justify-content-between align-items-center flex-wrap">
         <div class="d-flex align-items-center gap-3">
-          <img src="47091150-d070-42ab-9a1f-f55d614dc300.jpg" alt="Logo" style="height:44px">
+          <img src="https://picsum.photos/seed/nexus-logo/120/120" alt="Logo" style="height:44px">
           <div>
             <div style="font-weight:700">Nexus Digital Solution</div>
             <small>© 2025 Nexus Digital — Addis Ababa</small>
@@ -286,5 +310,9 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({duration:700, once:true});
+  </script>
 </body>
 </html>
