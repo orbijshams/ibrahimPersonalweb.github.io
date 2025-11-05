@@ -3,46 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nexus Digital Solution</title>
+  <title>Nexus Digital Solution — Ads • Graphics • Video</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     :root{
-      --deep-blue:#0b3b75; /* brand deep blue */
+      --deep-blue:#0b3b75;
       --mid-blue:#1e63a8;
       --accent-orange:#ff9a2e;
       --accent-dark:#ff7b00;
+      --card-shadow:0 8px 30px rgba(11,59,117,0.08);
     }
     *{box-sizing:border-box}
     body{font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:#13314a}
-    .navbar{background:linear-gradient(90deg,var(--deep-blue),var(--mid-blue));}
-    .navbar .nav-link{color:rgba(255,255,255,0.9);}
-    .navbar .brand-logo{height:40px}
+    a{transition:all .18s}
 
-    /* Hero */
-    .hero{min-height:72vh; display:flex; align-items:center; background:linear-gradient(180deg,var(--deep-blue),#115ea4); color:#fff; padding:48px 0}
-    .hero .left{padding:20px 2rem}
-    .hero h1{font-size:3rem; line-height:1.05; font-weight:700}
-    .hero p.lead{font-size:1.125rem; color:rgba(255,255,255,0.9); margin-top:1rem}
+    /* NAV */
+    .navbar{background:linear-gradient(90deg,var(--deep-blue),var(--mid-blue));}
+    .navbar .nav-link{color:rgba(255,255,255,0.95);}
+    .brand-logo{height:44px}
+
+    /* HERO */
+    .hero{min-height:74vh; display:flex; align-items:center; background:linear-gradient(180deg,var(--deep-blue),#115ea4); color:#fff; padding:48px 0}
+    .hero h1{font-size:3rem; line-height:1.03; font-weight:800}
+    .hero p.lead{font-size:1.125rem; color:rgba(255,255,255,0.93); margin-top:1rem}
     .btn-primary-cta{background:var(--accent-orange); border:0; color:#fff; padding:12px 22px; border-radius:10px}
     .btn-outline-cta{border:2px solid rgba(255,255,255,0.18); color:#fff; background:transparent; padding:10px 20px; border-radius:10px}
+    .hero-ill{max-width:540px; width:100%; display:block; box-shadow:var(--card-shadow); border-radius:14px}
 
-    .hero-illustration{max-width:520px; width:100%; display:block}
+    /* SERVICES */
+    .service-card{border-radius:12px; box-shadow:var(--card-shadow); border:0}
+    .service-icon{font-size:28px; color:var(--accent-dark)}
 
-    /* Contact CTA */
-    .contact-cta{background:#fff; padding:48px 0; text-align:center}
-    .contact-cta h2{color:var(--mid-blue); font-size:2.25rem; margin-bottom:18px}
-    .whatsapp-btn{background:#25D366; color:#fff; padding:14px 22px; border-radius:8px; display:inline-flex; align-items:center; gap:10px; font-weight:600; border:none}
+    /* PORTFOLIO */
+    .portfolio-item img{width:100%; height:220px; object-fit:cover; border-radius:10px}
 
-    /* Sections */
-    section{padding:56px 0}
-    .section-title{color:var(--deep-blue); font-weight:700; margin-bottom:24px}
+    /* VIDEO */
+    .video-frame{width:100%; height:320px; border-radius:10px; box-shadow:var(--card-shadow); border:0}
+
+    /* CONTACT */
+    .contact-card{border-radius:12px; box-shadow:var(--card-shadow); border:0}
+    .whatsapp-btn{background:#25D366; color:#fff; padding:12px 18px; border-radius:8px; display:inline-flex; align-items:center; gap:10px; border:none}
+
+    section{padding:64px 0}
+    .section-title{color:var(--deep-blue); font-weight:800; margin-bottom:20px}
 
     footer{background:var(--deep-blue); color:#fff; padding:28px 0; text-align:center}
 
     @media (max-width:991px){
       .hero h1{font-size:2rem}
       .hero{padding:36px 0}
-      .hero-illustration{margin-top:24px}
+      .hero-ill{margin-top:24px}
+      .portfolio-item img{height:160px}
+      .video-frame{height:200px}
     }
   </style>
 </head>
@@ -50,11 +63,10 @@
 
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#home">
+      <a class="navbar-brand d-flex align-items-center text-white" href="#home">
         <img src="47091150-d070-42ab-9a1f-f55d614dc300.jpg" alt="Nexus Logo" class="brand-logo me-2">
-        <span style="color:white;font-weight:700">Nexus Digital</span>
+        <span style="font-weight:800">Nexus Digital</span>
       </a>
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -63,10 +75,10 @@
         <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
           <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Testimonials</a></li>
-          <li class="nav-item ms-3"><a class="btn btn-sm" href="#contact" style="background:var(--accent-orange);color:#fff;border-radius:8px;padding:8px 14px">Get Started</a></li>
+          <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-3"><a class="btn btn-sm" href="#contact" style="background:var(--accent-orange);color:#fff;border-radius:8px;padding:8px 14px">Get Quote</a></li>
         </ul>
       </div>
     </div>
@@ -76,93 +88,200 @@
   <header id="home" class="hero">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 left">
-          <h1>Your Partner in<br> Ethiopian Digital Marketing</h1>
-          <p class="lead">Grow your local business with expert social media, ad campaigns, and beautiful websites designed for Addis Ababa businesses.</p>
+        <div class="col-lg-6 text-white">
+          <h1>Empowering Brands with Creative Digital Solutions</h1>
+          <p class="lead">We specialize in Ads, Graphics Design, and Video Editing — creating campaigns and content that grow engagement and sales for Ethiopian businesses.</p>
           <div class="mt-4 d-flex gap-3 flex-wrap">
-            <a class="btn btn-primary-cta" href="#contact">Get Started</a>
-            <a class="btn btn-outline-cta" href="#services">Learn More</a>
+            <a class="btn btn-primary-cta" href="#contact">Get a Free Quote</a>
+            <a class="btn btn-outline-cta" href="#portfolio">See Our Work</a>
+          </div>
+
+          <div class="mt-4 d-flex flex-wrap gap-2">
+            <div class="d-flex align-items-center me-3"><i class="fa-solid fa-bullhorn fa-2x me-2" style="color:#fff"></i><div><small class="d-block">Ads & Campaigns</small><strong>Meta / Facebook Ads</strong></div></div>
+            <div class="d-flex align-items-center"><i class="fa-solid fa-paintbrush fa-2x me-2" style="color:#fff"></i><div><small class="d-block">Graphics</small><strong>Logos, Posters</strong></div></div>
           </div>
         </div>
         <div class="col-lg-6 text-center">
-          <img class="hero-illustration" src="/mnt/data/A_website_homepage_screenshot_for_Nexus_Digital_So.png" alt="Hero Illustration">
+          <img class="hero-ill" src="https://source.unsplash.com/900x600/?digital-marketing,advertising" alt="Digital marketing illustration">
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Contact CTA -->
-  <section class="contact-cta">
-    <div class="container">
-      <h2>Contact@NexusDigital.et</h2>
-      <a class="whatsapp-btn" href="https://wa.me/251927937641" target="_blank" rel="noopener noreferrer">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48C18.21 1.17 15.09 0 11.77 0 6.06 0 1.02 4.78.04 10.95c-.37 2.17.04 4.32 1.15 6.13L0 24l6.96-1.86c1.8 1.03 3.87 1.49 5.9 1.49 5.71 0 10.75-4.78 11.73-10.95.98-6.17-3.07-11.13-8.07-12.33z" fill="white"/></svg>
-        Message Us on WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <!-- Services (brief) -->
+  <!-- SERVICES -->
   <section id="services">
     <div class="container">
       <h3 class="section-title text-center">Our Services</h3>
+      <p class="text-center text-muted mb-4">Full-service digital solutions — from strategy to creative production and campaign delivery.</p>
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="p-4 shadow-sm bg-white rounded text-center">
-            <h5>Social Media Management</h5>
-            <p>Profile setup, monthly content, community engagement.</p>
+          <div class="card service-card p-4 text-center">
+            <div class="mb-3"><i class="fa-solid fa-bullhorn service-icon"></i></div>
+            <h5>Advertising & Campaigns</h5>
+            <p class="text-muted">Audience research, creatives, ad setup and optimisation on Facebook & Instagram.</p>
+            <a href="#contact" class="btn btn-sm" style="background:var(--accent-orange);color:#fff;border-radius:8px">Start Campaign</a>
           </div>
         </div>
+
         <div class="col-md-4">
-          <div class="p-4 shadow-sm bg-white rounded text-center">
-            <h5>Paid Campaigns</h5>
-            <p>Strategy, creative, and optimization for Facebook & Instagram.</p>
+          <div class="card service-card p-4 text-center">
+            <div class="mb-3"><i class="fa-solid fa-palette service-icon"></i></div>
+            <h5>Graphics Design</h5>
+            <p class="text-muted">Branding, logos, social media creatives, posters, and print-ready files.</p>
+            <a href="#portfolio" class="btn btn-sm btn-outline-primary">View Designs</a>
           </div>
         </div>
+
         <div class="col-md-4">
-          <div class="p-4 shadow-sm bg-white rounded text-center">
-            <h5>Website Setup</h5>
-            <p>Fast 3-5 page websites with SEO and analytics setup.</p>
+          <div class="card service-card p-4 text-center">
+            <div class="mb-3"><i class="fa-solid fa-film service-icon"></i></div>
+            <h5>Video Editing</h5>
+            <p class="text-muted">Short-form promo videos, social clips, and product showcases optimized for engagement.</p>
+            <a href="#video" class="btn btn-sm btn-outline-primary">Watch Samples</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pricing -->
-  <section id="pricing" class="bg-light">
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="bg-light">
     <div class="container">
-      <h3 class="section-title text-center">Website Packages</h3>
+      <h3 class="section-title text-center">Portfolio — Selected Work</h3>
+      <p class="text-center text-muted mb-4">Sample mockups and campaign snapshots to show our style and results.</p>
+      <div class="row g-3">
+        <div class="col-md-4 portfolio-item">
+          <img src="https://source.unsplash.com/800x600/?social-media,ad" alt="Ad mockup">
+          <h6 class="mt-2">Social Campaign — Café</h6>
+          <p class="text-muted small">Engagement-focused ad set with creative carousel.</p>
+        </div>
+        <div class="col-md-4 portfolio-item">
+          <img src="https://source.unsplash.com/800x600/?poster,design" alt="Graphic design mockup">
+          <h6 class="mt-2">Poster & Brand Kit</h6>
+          <p class="text-muted small">Logo, color palette, and print-ready poster.</p>
+        </div>
+        <div class="col-md-4 portfolio-item">
+          <img src="https://source.unsplash.com/800x600/?video,editing" alt="Video project mockup">
+          <h6 class="mt-2">Product Video</h6>
+          <p class="text-muted small">30s product highlight for social platforms.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-4"><a href="#contact" class="btn btn-primary-cta">Book a Portfolio Review</a></div>
+    </div>
+  </section>
+
+  <!-- VIDEO SAMPLES -->
+  <section id="video">
+    <div class="container">
+      <h3 class="section-title text-center">Video Editing Samples</h3>
+      <p class="text-center text-muted mb-4">Short edits and promotional cuts — optimized for Instagram & Facebook.</p>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <iframe class="video-frame" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Video sample" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6">
+          <h5>Short Promo — Sample Edit</h5>
+          <p class="text-muted">A fast-paced 30s promo edit with overlays, music, and CTA optimized for conversions.</p>
+          <ul class="text-muted">
+            <li>Color grading & sound mixing</li>
+            <li>Subtitles & platform-specific edits</li>
+            <li>Delivery in MP4, IGTV, and vertical cuts</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-cta">Request Video Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-light">
+    <div class="container">
+      <h3 class="section-title text-center">About Nexus</h3>
+      <p class="text-center text-muted mb-4">Nexus Digital Solution blends creativity and data. We help Ethiopian businesses stand out with high-performing ads, memorable visuals, and video storytelling.</p>
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center"><img src="https://source.unsplash.com/600x400/?team,office" class="img-fluid rounded shadow-sm" alt="Team"></div>
+        <div class="col-md-6">
+          <h5>How we work</h5>
+          <ol class="text-muted">
+            <li>Discovery & audience research</li>
+            <li>Creative production (design & video)</li>
+            <li>Campaign launch & optimization</li>
+          </ol>
+          <a href="#contact" class="btn btn-primary-cta mt-2">Start a Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h3 class="section-title text-center">Get a Free Quote</h3>
+      <p class="text-center text-muted mb-4">Tell us about your project and we’ll reply within 24 hours.</p>
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card p-3 text-center">
-            <h5>Basic</h5>
-            <p>3 pages — Static</p>
-            <strong>5,000 Birr</strong>
+        <div class="col-lg-6">
+          <div class="card contact-card p-4">
+            <h5>Contact Details</h5>
+            <p class="mb-1"><strong>Email:</strong> orbijshmas@gmail.com</p>
+            <p class="mb-1"><strong>Phone / WhatsApp:</strong> +251 927 937 641</p>
+            <p class="mb-1"><strong>Location:</strong> Addis Ababa, Ethiopia</p>
+            <div class="mt-3">
+              <a class="whatsapp-btn" href="https://wa.me/251927937641" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Message Us on WhatsApp</a>
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card p-3 text-center">
-            <h5>Standard</h5>
-            <p>5 pages + SEO</p>
-            <strong>9,000 Birr</strong>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-3 text-center">
-            <h5>Premium</h5>
-            <p>WordPress + Blog</p>
-            <strong>12,000 Birr</strong>
+        <div class="col-lg-6">
+          <div class="card p-4 contact-card">
+            <!-- Note: replace form action with your Formspree or server endpoint. Currently opens mail client. -->
+            <form action="mailto:orbijshmas@gmail.com" method="post" enctype="text/plain">
+              <div class="mb-3">
+                <label class="form-label">Your name</label>
+                <input type="text" class="form-control" name="Name" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" name="Email" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Project type</label>
+                <select class="form-select" name="Project">
+                  <option>Advertising Campaign</option>
+                  <option>Graphics / Branding</option>
+                  <option>Video Editing</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" name="Message" rows="4" required></textarea>
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-primary-cta">Send Inquiry</button>
+              </div>
+            </form>
+            <small class="text-muted d-block mt-2">Tip: Replace the form action with your Formspree or server endpoint for a better experience.</small>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
-      <div>&copy; 2025 Nexus Digital Solution — Addis Ababa</div>
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div class="d-flex align-items-center gap-3">
+          <img src="47091150-d070-42ab-9a1f-f55d614dc300.jpg" alt="Logo" style="height:44px">
+          <div>
+            <div style="font-weight:700">Nexus Digital Solution</div>
+            <small>© 2025 Nexus Digital — Addis Ababa</small>
+          </div>
+        </div>
+        <div class="mt-3 mt-md-0">
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-facebook fa-lg"></i></a>
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram fa-lg"></i></a>
+          <a href="#" class="text-white"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
 
