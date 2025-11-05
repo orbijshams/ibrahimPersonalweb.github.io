@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Jemal - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Keeping Inter font as per previous design */
+            background-color: #f8fafc; /* Light blue-gray background */
+            color: #334155; /* Dark slate gray text */
+        }
+        /* Custom scroll-to-top button styling */
+        #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place at the bottom */
+            right: 30px; /* Place at the right */
+            z-index: 99; /* Ensure it's above other content */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: #4f46e5; /* Indigo background */
+            color: white; /* White text */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 50%; /* Rounded corners */
+            font-size: 1.5rem; /* Increase font size */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+        #scrollToTopBtn:hover {
+            background-color: #4338ca; /* Darker indigo on hover */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <!-- Header Section -->
+    <header class="bg-indigo-700 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold mb-2 md:mb-0">Ibrahim Jemal</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="hover:text-indigo-200 transition duration-300">About</a></li>
+                    <li><a href="#skills" class="hover:text-indigo-200 transition duration-300">Skills</a></li>
+                    <li><a href="#certifications" class="hover:text-indigo-200 transition duration-300">Certifications</a></li>
+                    <li><a href="#portfolio" class="hover:text-indigo-200 transition duration-300">Portfolio</a></li>
+                    <li><a href="#testimonials" class="hover:text-indigo-200 transition duration-300">Testimonials</a></li>
+                    <li><a href="#contact" class="hover:text-indigo-200 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-12 text-center shadow-inner">
+        <div class="container mx-auto px-4">
+            <!-- Profile picture updated to pic.jpg and made larger -->
+            <img src="pic.jpg" alt="Ibrahim Jemal Profile Picture" class="rounded-full w-48 h-48 mx-auto mb-6 border-4 border-white shadow-lg">
+            <h1 class="text-5xl font-extrabold mb-4 leading-tight">Hi, I'm Ibrahim Jemal</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">A Graphics Designer, Video Editor, and Website Developer based in Addis Ababa</p>
+            <a href="#contact" class="bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Hire Me</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-4xl font-bold text-center mb-10 text-indigo-800">About Me</h3>
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                <p class="text-lg leading-relaxed text-gray-700 mb-4">
+                    I am a passionate software designer with experience in web design, frontend development, user interface enhancement, and <span class="font-semibold text-indigo-600">Digital Marketing</span>. I love creating digital experiences that are not only functional but visually stunning and easy to use.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    I have successfully completed comprehensive training programs at <span class="font-semibold text-indigo-600">Zewd Tech</span>, where I honed my skills in industry-standard software and techniques for Video Editing and Graphic Design. My commitment to continuous learning and my meticulous attention to detail ensure that every project I undertake is executed with precision and creativity. I am eager to leverage my expertise to contribute to impactful and innovative projects.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-4xl font-bold text-center mb-10 text-indigo-800">My Expertise</h3>
+            <!-- Changed to grid for better centering and responsiveness with 3 columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Creative Design Skills -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:ring-2 hover:ring-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-indigo-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m-5 4v-4a1 1 0 00-1-1H4a1 1 0 00-1 1v4a1 1 0 001 1h5a1 1 0 001-1zm3-1h8a1 1 0 001-1V6a1 1 0 00-1-1h-8a1 1 0 00-1 1v10a1 1 0 001 1z"></path></svg>
+                        <h4 class="text-2xl font-semibold text-gray-800">Creative Design</h4>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Video Editing (Adobe Premiere Pro, Capcut)</li>
+                        <li>Graphic Design (Adobe Photoshop, Illustrator, InDesign)</li>
+                        <li>UI/UX Design Fundamentals</li>
+                        <li>Visual Storytelling</li>
+                    </ul>
+                </div>
+                <!-- Technical Development Skills -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:ring-2 hover:ring-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-indigo-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16L2 12l4-4"></path></svg>
+                        <h4 class="text-2xl font-semibold text-gray-800">Technical Development</h4>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>HTML5 & CSS3</li>
+                        <li>Tailwind CSS & Bootstrap</li>
+                        <li>JavaScript & React</li>
+                        <li>Python & Selenium</li>
+                        <li>Frontend Development</li>
+                    </ul>
+                </div>
+                <!-- Digital Marketing Skills -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:ring-2 hover:ring-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-indigo-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        <h4 class="text-2xl font-semibold text-gray-800">Digital Marketing</h4>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Social Media Marketing</li>
+                        <li>Content Marketing</li>
+                        <li>Search Engine Optimization (SEO) Basics</li>
+                        <li>Email Marketing Fundamentals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl"> <!-- Changed max-w-4xl to max-w-5xl -->
+            <h3 class="text-4xl font-bold text-center mb-10 text-indigo-800">My Certifications</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video Editing Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Video Editing Certificate</h4>
+                    <img src="Ibrahim Jemal video editing certificate_.jpg" alt="Video Editing Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Awarded by <span class="font-semibold text-indigo-600">Zewd Tech</span> on April 25, 2025</p>
+                </div>
+                <!-- Graphic Design Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Graphic Design Certificate</h4>
+                    <img src="ibrahim jemal.jpg" alt="Graphic Design Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Awarded by <span class="font-semibold text-indigo-600">Zewd Tech</span> on April 29, 2025</p>
+                </div>
+                <!-- Meta Front-End Developer Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Meta Front-End Developer</h4>
+                    <!-- Using a placeholder for the certificate image, replace if you have one -->
+                    <img src="https://placehold.co/600x400/b794f4/ffffff?text=Meta+Cert" alt="Meta Front-End Developer Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Credential ID: MZK5DZJ7JGLG<br>Issued by Coursera, 2024</p>
+                </div>
+                <!-- Google IT Support Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Google IT Support</h4>
+                    <!-- Using a placeholder for the certificate image, replace if you have one -->
+                    <img src="https://placehold.co/600x400/9f7aea/ffffff?text=Google+Cert" alt="Google IT Support Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Credential ID: 6BZZZMW4A4C5<br>Issued by Coursera, 2024</p>
+                </div>
+                <!-- UI/UX Design Fundamentals Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">UI/UX Design Fundamentals</h4>
+                    <!-- Using a placeholder for the certificate image, replace if you have one -->
+                    <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=UI/UX+Cert" alt="UI/UX Design Fundamentals Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Credential ID: UX293DJD9JD<br>Issued by freeCodeCamp, 2023</p>
+                </div>
+                <!-- Digital Marketing Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Digital Marketing Certificate</h4>
+                    <img src="digital.jpg" alt="Digital Marketing Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Issued by [Issuing Organization], [Year]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-10 text-indigo-800">My Portfolio</h3>
+            <!-- Removed the instruction text here -->
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 (Video) -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Dynamic+Video+Promo" alt="Dynamic Promo Video Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Dynamic Promo Video</h4>
+                        <p class="text-gray-700 text-sm mb-4">
+                            A short, engaging promotional video created for a fictional tech startup. Focused on fast cuts, modern typography, and vibrant color grading.
+                        </p>
+                        <!-- Removed the link -->
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 (Graphic) -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Brand+Identity+Design" alt="Brand Identity Design Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Brand Identity Design</h4>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Complete brand identity package including logo, color palette, and typography guidelines for a local coffee shop.
+                        </p>
+                        <!-- Removed the link -->
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 (Software Project) -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Facebook+Bot+Automation" alt="Facebook Automation Bot Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Facebook Automation Bot</h4>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Developed using Selenium and Python with human-like interaction and Excel integration for efficient task automation.
+                        </p>
+                        <!-- Removed the link -->
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 (Software Project) -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Portfolio+Website+Design" alt="Personal Portfolio Website Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Personal Portfolio Website</h4>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Built with Tailwind CSS showcasing projects, skills, testimonials, and contact form. (This very website!)
+                        </p>
+                        <!-- Removed the link -->
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 (Software Project) -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Student+Tracker+App" alt="Student Activity Tracker Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Student Activity Tracker</h4>
+                        <p class="text-gray-700 text-sm mb-4">
+                            An application for recording daily student marks, grades, and generating reports for parents.
+                        </p>
+                        <!-- Removed the link -->
+                    </div>
+                </div>
+
+                <!-- Add more portfolio items as needed -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-4xl font-bold text-center mb-10 text-indigo-800">Testimonials</h3>
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                <p class="italic text-lg leading-relaxed text-gray-700 mb-4">
+                    "Ibrahim is a dedicated and talented developer. His work on automation and UI design is top-notch. He consistently delivers high-quality results and is a pleasure to work with."
+                </p>
+                <span class="block font-semibold text-indigo-600">— Client Review</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-indigo-700 text-white">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h3 class="text-4xl font-bold mb-8">Get in Touch</h3>
+            <p class="text-xl mb-8">
+                I'm always excited to collaborate on new projects and discuss creative opportunities. Feel free to reach out!
+            </p>
+            <div class="flex flex-col space-y-4 items-center">
+                <a href="mailto:orbijshmas@gmail.com" class="bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 w-full md:w-auto">
+                    Email Me: orbijshmas@gmail.com
+                </a>
+                <a href="tel:+251927937641" class="bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 w-full md:w-auto">
+                    Call Me: +251 927 937641
+                </a>
+                <p class="text-lg font-semibold mt-4">Location: Addis Ababa, Ethiopia</p>
+                <!-- Add social media links if desired -->
+                <a href="https://linkedin.com/in/ibrahimjemal" target="_blank" rel="noopener noreferrer" class="bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 w-full md:w-auto">
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-300 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Ibrahim Jemal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll to top button logic
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
