@@ -1,318 +1,335 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nexus Digital Solution — Ads • Graphics • Video</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <style>
-    :root{
-      --deep-blue:#0b3b75;
-      --mid-blue:#1e63a8;
-      --accent-orange:#ff9a2e;
-      --accent-dark:#ff7b00;
-      --card-shadow:0 10px 30px rgba(11,59,117,0.08);
-    }
-    html{scroll-behavior:smooth}
-    *{box-sizing:border-box}
-    body{font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:#13314a}
-    a{transition:all .18s}
-
-    /* NAV */
-    .navbar{background:linear-gradient(90deg,var(--deep-blue),var(--mid-blue));}
-    .navbar .nav-link{color:rgba(255,255,255,0.95);}
-    .brand-logo{height:44px}
-
-    /* HERO */
-    .hero{min-height:74vh; display:flex; align-items:center; background:linear-gradient(180deg,var(--deep-blue),#115ea4); color:#fff; padding:48px 0}
-    .hero h1{font-size:3rem; line-height:1.03; font-weight:800}
-    .hero p.lead{font-size:1.125rem; color:rgba(255,255,255,0.93); margin-top:1rem}
-    .btn-primary-cta{background:var(--accent-orange); border:0; color:#fff; padding:12px 22px; border-radius:10px}
-    .btn-outline-cta{border:2px solid rgba(255,255,255,0.18); color:#fff; background:transparent; padding:10px 20px; border-radius:10px}
-    .hero-ill{max-width:540px; width:100%; display:block; box-shadow:var(--card-shadow); border-radius:14px}
-
-    /* SERVICES */
-    .service-card{border-radius:12px; box-shadow:var(--card-shadow); border:0}
-    .service-icon{font-size:28px; color:var(--accent-dark)}
-
-    /* PORTFOLIO */
-    .portfolio-item img{width:100%; height:220px; object-fit:cover; border-radius:10px}
-
-    /* VIDEO */
-    .video-frame{width:100%; height:320px; border-radius:10px; box-shadow:var(--card-shadow); border:0}
-
-    /* CONTACT */
-    .contact-card{border-radius:12px; box-shadow:var(--card-shadow); border:0}
-    .whatsapp-btn{background:#25D366; color:#fff; padding:12px 18px; border-radius:8px; display:inline-flex; align-items:center; gap:10px; border:none}
-
-    section{padding:64px 0}
-    .section-title{color:var(--deep-blue); font-weight:800; margin-bottom:20px}
-
-    footer{background:var(--deep-blue); color:#fff; padding:28px 0; text-align:center}
-
-    @media (max-width:991px){
-      .hero h1{font-size:2rem}
-      .hero{padding:36px 0}
-      .hero-ill{margin-top:24px}
-      .portfolio-item img{height:160px}
-      .video-frame{height:200px}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Jemal - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Keeping Inter font as per previous design */
+            background-color: #f8fafc; /* Light blue-gray background */
+            color: #334155; /* Dark slate gray text */
+        }
+        /* Custom scroll-to-top button styling */
+        #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place at the bottom */
+            right: 30px; /* Place at the right */
+            z-index: 99; /* Ensure it's above other content */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: #4f46e5; /* Indigo background */
+            color: white; /* White text */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 50%; /* Rounded corners */
+            font-size: 1.5rem; /* Increase font size */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+        #scrollToTopBtn:hover {
+            background-color: #4338ca; /* Darker indigo on hover */
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased">
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
 
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center text-white" href="#home">
-        <img src="https://picsum.photos/seed/nexus-logo/120/120" alt="Nexus Logo" class="brand-logo me-2">
-        <span style="font-weight:800">Nexus Digital</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Header Section -->
+    <header class="bg-indigo-700 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold mb-2 md:mb-0">Ibrahim Jemal</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="hover:text-indigo-200 transition duration-300">About</a></li>
+                    <li><a href="#skills" class="hover:text-indigo-200 transition duration-300">Skills</a></li>
+                    <li><a href="#certifications" class="hover:text-indigo-200 transition duration-300">Certifications</a></li>
+                    <li><a href="#portfolio" class="hover:text-indigo-200 transition duration-300">Portfolio</a></li>
+                    <li><a href="#testimonials" class="hover:text-indigo-200 transition duration-300">Testimonials</a></li>
+                    <li><a href="#contact" class="hover:text-indigo-200 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item ms-3"><a class="btn btn-sm" href="#contact" style="background:var(--accent-orange);color:#fff;border-radius:8px;padding:8px 14px">Get Quote</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-12 text-center shadow-inner">
+        <div class="container mx-auto px-4">
+            <!-- Profile picture updated to pic.jpg and made larger -->
+            <img src="pic.jpg" alt="Ibrahim Jemal Profile Picture" class="rounded-full w-48 h-48 mx-auto mb-6 border-4 border-white shadow-lg">
+            <h1 class="text-5xl font-extrabold mb-4 leading-tight">Hi, I'm Ibrahim Jemal</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">A Graphics Designer, Video Editor, and Website Developer based in Addis Ababa</p>
+            <a href="#contact" class="bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Hire Me</a>
+        </div>
+    </section>
 
-  <!-- HERO -->
-  <header id="home" class="hero">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 text-white" data-aos="fade-right">
-          <h1>Empowering Brands with Creative Digital Solutions</h1>
-          <p class="lead">We specialize in Ads, Graphics Design, and Video Editing — creating campaigns and content that grow engagement and sales for Ethiopian businesses.</p>
-          <div class="mt-4 d-flex gap-3 flex-wrap">
-            <a class="btn btn-primary-cta" href="#contact">Get a Free Quote</a>
-            <a class="btn btn-outline-cta" href="#portfolio">See Our Work</a>
-          </div>
-
-          <div class="mt-4 d-flex flex-wrap gap-3">
-            <div class="d-flex align-items-center bg-white bg-opacity-10 p-2 rounded">
-              <i class="fa-solid fa-bullhorn fa-2x me-3" style="color:#fff"></i>
-              <div class="text-start">
-                <small class="d-block text-white-50">Ads & Campaigns</small>
-                <strong>Meta / Facebook Ads</strong>
-              </div>
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-4xl font-bold text-center mb-10 text-indigo-800">About Me</h3>
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                <p class="text-lg leading-relaxed text-gray-700 mb-4">
+                    I am a passionate software designer with experience in web design, frontend development, user interface enhancement, and <span class="font-semibold text-indigo-600">Digital Marketing</span>. I love creating digital experiences that are not only functional but visually stunning and easy to use.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    I have successfully completed comprehensive training programs at <span class="font-semibold text-indigo-600">Zewd Tech</span>, where I honed my skills in industry-standard software and techniques for Video Editing and Graphic Design. My commitment to continuous learning and my meticulous attention to detail ensure that every project I undertake is executed with precision and creativity. I am eager to leverage my expertise to contribute to impactful and innovative projects.
+                </p>
             </div>
-            <div class="d-flex align-items-center bg-white bg-opacity-10 p-2 rounded">
-              <i class="fa-solid fa-palette fa-2x me-3" style="color:#fff"></i>
-              <div class="text-start">
-                <small class="d-block text-white-50">Graphics</small>
-                <strong>Logos, Posters</strong>
-              </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-4xl font-bold text-center mb-10 text-indigo-800">My Expertise</h3>
+            <!-- Changed to grid for better centering and responsiveness with 3 columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Creative Design Skills -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:ring-2 hover:ring-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-indigo-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m-5 4v-4a1 1 0 00-1-1H4a1 1 0 00-1 1v4a1 1 0 001 1h5a1 1 0 001-1zm3-1h8a1 1 0 001-1V6a1 1 0 00-1-1h-8a1 1 0 00-1 1v10a1 1 0 001 1z"></path></svg>
+                        <h4 class="text-2xl font-semibold text-gray-800">Creative Design</h4>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Video Editing (Adobe Premiere Pro, Capcut)</li>
+                        <li>Graphic Design (Adobe Photoshop, Illustrator, InDesign)</li>
+                        <li>UI/UX Design Fundamentals</li>
+                        <li>Visual Storytelling</li>
+                    </ul>
+                </div>
+                <!-- Technical Development Skills -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:ring-2 hover:ring-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-indigo-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16L2 12l4-4"></path></svg>
+                        <h4 class="text-2xl font-semibold text-gray-800">Technical Development</h4>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>HTML5 & CSS3</li>
+                        <li>Tailwind CSS & Bootstrap</li>
+                        <li>JavaScript & React</li>
+                        <li>Python & Selenium</li>
+                        <li>Frontend Development</li>
+                    </ul>
+                </div>
+                <!-- Digital Marketing Skills -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:ring-2 hover:ring-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-indigo-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        <h4 class="text-2xl font-semibold text-gray-800">Digital Marketing</h4>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Social Media Marketing</li>
+                        <li>Content Marketing</li>
+                        <li>Search Engine Optimization (SEO) Basics</li>
+                        <li>Email Marketing Fundamentals</li>
+                    </ul>
+                </div>
             </div>
-            <div class="d-flex align-items-center bg-white bg-opacity-10 p-2 rounded">
-              <i class="fa-solid fa-film fa-2x me-3" style="color:#fff"></i>
-              <div class="text-start">
-                <small class="d-block text-white-50">Video</small>
-                <strong>Editing & Motion</strong>
-              </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl"> <!-- Changed max-w-4xl to max-w-5xl -->
+            <h3 class="text-4xl font-bold text-center mb-10 text-indigo-800">My Certifications</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video Editing Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Video Editing Certificate</h4>
+                    <img src="Ibrahim Jemal video editing certificate_.jpg" alt="Video Editing Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Awarded by <span class="font-semibold text-indigo-600">Zewd Tech</span> on April 25, 2025</p>
+                </div>
+                <!-- Graphic Design Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Graphic Design Certificate</h4>
+                    <img src="ibrahim jemal.jpg" alt="Graphic Design Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Awarded by <span class="font-semibold text-indigo-600">Zewd Tech</span> on April 29, 2025</p>
+                </div>
+                <!-- Meta Front-End Developer Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Meta Front-End Developer</h4>
+                    <!-- Using a placeholder for the certificate image, replace if you have one -->
+                    <img src="https://placehold.co/600x400/b794f4/ffffff?text=Meta+Cert" alt="Meta Front-End Developer Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Credential ID: MZK5DZJ7JGLG<br>Issued by Coursera, 2024</p>
+                </div>
+                <!-- Google IT Support Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Google IT Support</h4>
+                    <!-- Using a placeholder for the certificate image, replace if you have one -->
+                    <img src="https://placehold.co/600x400/9f7aea/ffffff?text=Google+Cert" alt="Google IT Support Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Credential ID: 6BZZZMW4A4C5<br>Issued by Coursera, 2024</p>
+                </div>
+                <!-- UI/UX Design Fundamentals Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">UI/UX Design Fundamentals</h4>
+                    <!-- Using a placeholder for the certificate image, replace if you have one -->
+                    <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=UI/UX+Cert" alt="UI/UX Design Fundamentals Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Credential ID: UX293DJD9JD<br>Issued by freeCodeCamp, 2023</p>
+                </div>
+                <!-- Digital Marketing Certificate -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Digital Marketing Certificate</h4>
+                    <img src="digital.jpg" alt="Digital Marketing Certificate" class="rounded-lg shadow-lg mb-4 w-full h-auto max-w-md">
+                    <p class="text-gray-700 text-center">Issued by [Issuing Organization], [Year]</p>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-lg-6 text-center" data-aos="fade-left">
-          <img class="hero-ill" src="https://picsum.photos/seed/hero/900/600" alt="Digital marketing illustration">
-        </div>
-      </div>
-    </div>
-  </header>
+    </section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="container">
-      <h3 class="section-title text-center" data-aos="fade-up">Our Services</h3>
-      <p class="text-center text-muted mb-4" data-aos="fade-up">Full-service digital solutions — from strategy to creative production and campaign delivery.</p>
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="50">
-          <div class="card service-card p-4 text-center">
-            <img src="https://picsum.photos/seed/ads/600/400" class="img-fluid rounded mb-3" alt="Ads service">
-            <div class="mb-3"><i class="fa-solid fa-bullhorn service-icon"></i></div>
-            <h5>Advertising & Campaigns</h5>
-            <p class="text-muted">Audience research, creatives, ad setup and optimisation on Facebook & Instagram.</p>
-            <a href="#contact" class="btn btn-sm" style="background:var(--accent-orange);color:#fff;border-radius:8px">Start Campaign</a>
-          </div>
-        </div>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-10 text-indigo-800">My Portfolio</h3>
+            <!-- Removed the instruction text here -->
 
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
-          <div class="card service-card p-4 text-center">
-            <img src="https://picsum.photos/seed/graphics/600/400" class="img-fluid rounded mb-3" alt="Graphics service">
-            <div class="mb-3"><i class="fa-solid fa-palette service-icon"></i></div>
-            <h5>Graphics Design</h5>
-            <p class="text-muted">Branding, logos, social media creatives, posters, and print-ready files.</p>
-            <a href="#portfolio" class="btn btn-sm btn-outline-primary">View Designs</a>
-          </div>
-        </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 (Video) -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Dynamic+Video+Promo" alt="Dynamic Promo Video Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Dynamic Promo Video</h4>
+                        <p class="text-gray-700 text-sm mb-4">
+                            A short, engaging promotional video created for a fictional tech startup. Focused on fast cuts, modern typography, and vibrant color grading.
+                        </p>
+                        <!-- Removed the link -->
+                    </div>
+                </div>
 
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="250">
-          <div class="card service-card p-4 text-center">
-            <img src="https://picsum.photos/seed/video/600/400" class="img-fluid rounded mb-3" alt="Video service">
-            <div class="mb-3"><i class="fa-solid fa-film service-icon"></i></div>
-            <h5>Video Editing</h5>
-            <p class="text-muted">Short-form promo videos, social clips, and product showcases optimized for engagement.</p>
-            <a href="#video" class="btn btn-sm btn-outline-primary">Watch Samples</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+                <!-- Portfolio Item 2 (Graphic) -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Brand+Identity+Design" alt="Brand Identity Design Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Brand Identity Design</h4>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Complete brand identity package including logo, color palette, and typography guidelines for a local coffee shop.
+                        </p>
+                        <!-- Removed the link -->
+                    </div>
+                </div>
 
-  <!-- PORTFOLIO -->
-  <section id="portfolio" class="bg-light">
-    <div class="container">
-      <h3 class="section-title text-center" data-aos="fade-up">Portfolio — Selected Work</h3>
-      <p class="text-center text-muted mb-4" data-aos="fade-up">Sample mockups and campaign snapshots to show our style and results.</p>
-      <div class="row g-3">
-        <div class="col-md-4 portfolio-item" data-aos="fade-up" data-aos-delay="50">
-          <img src="https://picsum.photos/seed/portfolio1/800/600" alt="Ad mockup">
-          <h6 class="mt-2">Social Campaign — Café</h6>
-          <p class="text-muted small">Engagement-focused ad set with creative carousel.</p>
-        </div>
-        <div class="col-md-4 portfolio-item" data-aos="fade-up" data-aos-delay="150">
-          <img src="https://picsum.photos/seed/portfolio2/800/600" alt="Graphic design mockup">
-          <h6 class="mt-2">Poster & Brand Kit</h6>
-          <p class="text-muted small">Logo, color palette, and print-ready poster.</p>
-        </div>
-        <div class="col-md-4 portfolio-item" data-aos="fade-up" data-aos-delay="250">
-          <img src="https://picsum.photos/seed/portfolio3/800/600" alt="Video project mockup">
-          <h6 class="mt-2">Product Video</h6>
-          <p class="text-muted small">30s product highlight for social platforms.</p>
-        </div>
-      </div>
+                <!-- Portfolio Item 3 (Software Project) -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Facebook+Bot+Automation" alt="Facebook Automation Bot Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Facebook Automation Bot</h4>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Developed using Selenium and Python with human-like interaction and Excel integration for efficient task automation.
+                        </p>
+                        <!-- Removed the link -->
+                    </div>
+                </div>
 
-      <div class="text-center mt-4" data-aos="fade-up"><a href="#contact" class="btn btn-primary-cta">Book a Portfolio Review</a></div>
-    </div>
-  </section>
+                <!-- Portfolio Item 4 (Software Project) -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Portfolio+Website+Design" alt="Personal Portfolio Website Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Personal Portfolio Website</h4>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Built with Tailwind CSS showcasing projects, skills, testimonials, and contact form. (This very website!)
+                        </p>
+                        <!-- Removed the link -->
+                    </div>
+                </div>
 
-  <!-- VIDEO SAMPLES -->
-  <section id="video">
-    <div class="container">
-      <h3 class="section-title text-center" data-aos="fade-up">Video Editing Samples</h3>
-      <p class="text-center text-muted mb-4" data-aos="fade-up">Short edits and promotional cuts — optimized for Instagram & Facebook.</p>
-      <div class="row g-4 align-items-center">
-        <div class="col-md-6" data-aos="fade-right">
-          <img src="https://picsum.photos/seed/video-thumb/900/600" class="video-frame" alt="Video sample thumbnail">
-        </div>
-        <div class="col-md-6" data-aos="fade-left">
-          <h5>Short Promo — Sample Edit</h5>
-          <p class="text-muted">A fast-paced 30s promo edit with overlays, music, and CTA optimized for conversions.</p>
-          <ul class="text-muted">
-            <li>Color grading & sound mixing</li>
-            <li>Subtitles & platform-specific edits</li>
-            <li>Delivery in MP4, IGTV, and vertical cuts</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline-cta">Request Video Quote</a>
-        </div>
-      </div>
-    </div>
-  </section>
+                <!-- Portfolio Item 5 (Software Project) -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Student+Tracker+App" alt="Student Activity Tracker Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Student Activity Tracker</h4>
+                        <p class="text-gray-700 text-sm mb-4">
+                            An application for recording daily student marks, grades, and generating reports for parents.
+                        </p>
+                        <!-- Removed the link -->
+                    </div>
+                </div>
 
-  <!-- ABOUT -->
-  <section id="about" class="bg-light">
-    <div class="container">
-      <h3 class="section-title text-center" data-aos="fade-up">About Nexus</h3>
-      <p class="text-center text-muted mb-4" data-aos="fade-up">Nexus Digital Solution blends creativity and data. We help Ethiopian businesses stand out with high-performing ads, memorable visuals, and video storytelling.</p>
-      <div class="row align-items-center">
-        <div class="col-md-6 text-center" data-aos="fade-right"><img src="https://picsum.photos/seed/team/600/400" class="img-fluid rounded shadow-sm" alt="Team"></div>
-        <div class="col-md-6" data-aos="fade-left">
-          <h5>How we work</h5>
-          <ol class="text-muted">
-            <li>Discovery & audience research</li>
-            <li>Creative production (design & video)</li>
-            <li>Campaign launch & optimization</li>
-          </ol>
-          <a href="#contact" class="btn btn-primary-cta mt-2">Start a Project</a>
-        </div>
-      </div>
-    </div>
-  </section>
+                <!-- Add more portfolio items as needed -->
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <h3 class="section-title text-center" data-aos="fade-up">Get a Free Quote</h3>
-      <p class="text-center text-muted mb-4" data-aos="fade-up">Tell us about your project and we’ll reply within 24 hours.</p>
-      <div class="row g-4">
-        <div class="col-lg-6" data-aos="fade-right">
-          <div class="card contact-card p-4">
-            <h5>Contact Details</h5>
-            <p class="mb-1"><strong>Email:</strong> orbijshmas@gmail.com</p>
-            <p class="mb-1"><strong>Phone / WhatsApp:</strong> +251 927 937 641</p>
-            <p class="mb-1"><strong>Location:</strong> Addis Ababa, Ethiopia</p>
-            <div class="mt-3">
-              <a class="whatsapp-btn" href="https://wa.me/251927937641" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Message Us on WhatsApp</a>
             </div>
-          </div>
         </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <div class="card p-4 contact-card">
-            <!-- Note: replace form action with your Formspree or server endpoint. Currently opens mail client. -->
-            <form action="mailto:orbijshmas@gmail.com" method="post" enctype="text/plain">
-              <div class="mb-3">
-                <label class="form-label">Your name</label>
-                <input type="text" class="form-control" name="Name" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" name="Email" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Project type</label>
-                <select class="form-select" name="Project">
-                  <option>Advertising Campaign</option>
-                  <option>Graphics / Branding</option>
-                  <option>Video Editing</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Message</label>
-                <textarea class="form-control" name="Message" rows="4" required></textarea>
-              </div>
-              <div class="d-grid">
-                <button class="btn btn-primary-cta">Send Inquiry</button>
-              </div>
-            </form>
-            <small class="text-muted d-block mt-2">Tip: Replace the form action with your Formspree or server endpoint for a better experience.</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <div class="d-flex align-items-center gap-3">
-          <img src="https://picsum.photos/seed/nexus-logo/120/120" alt="Logo" style="height:44px">
-          <div>
-            <div style="font-weight:700">Nexus Digital Solution</div>
-            <small>© 2025 Nexus Digital — Addis Ababa</small>
-          </div>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-4xl font-bold text-center mb-10 text-indigo-800">Testimonials</h3>
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                <p class="italic text-lg leading-relaxed text-gray-700 mb-4">
+                    "Ibrahim is a dedicated and talented developer. His work on automation and UI design is top-notch. He consistently delivers high-quality results and is a pleasure to work with."
+                </p>
+                <span class="block font-semibold text-indigo-600">— Client Review</span>
+            </div>
         </div>
-        <div class="mt-3 mt-md-0">
-          <a href="#" class="text-white me-3"><i class="fa-brands fa-facebook fa-lg"></i></a>
-          <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram fa-lg"></i></a>
-          <a href="#" class="text-white"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({duration:700, once:true});
-  </script>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-indigo-700 text-white">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h3 class="text-4xl font-bold mb-8">Get in Touch</h3>
+            <p class="text-xl mb-8">
+                I'm always excited to collaborate on new projects and discuss creative opportunities. Feel free to reach out!
+            </p>
+            <div class="flex flex-col space-y-4 items-center">
+                <a href="mailto:orbijshmas@gmail.com" class="bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 w-full md:w-auto">
+                    Email Me: orbijshmas@gmail.com
+                </a>
+                <a href="tel:+251927937641" class="bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 w-full md:w-auto">
+                    Call Me: +251 927 937641
+                </a>
+                <p class="text-lg font-semibold mt-4">Location: Addis Ababa, Ethiopia</p>
+                <!-- Add social media links if desired -->
+                <a href="https://linkedin.com/in/ibrahimjemal" target="_blank" rel="noopener noreferrer" class="bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 w-full md:w-auto">
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-300 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Ibrahim Jemal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll to top button logic
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
